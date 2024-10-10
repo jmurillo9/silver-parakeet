@@ -1,0 +1,97 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "root",
+      "version": "0.20.7"
+    },
+    "outputs": {
+    }
+  },
+  "provider": [
+    {
+      "aws": {
+      }
+    },
+    {
+      "aws": {
+        "alias": "secondary",
+        "region": "us-west-1"
+      }
+    },
+    {
+      "aws": {
+        "alias": "third",
+        "region": "us-east-2"
+      }
+    }
+  ],
+  "resource": {
+    "aws_s3_bucket": {
+      "silver_parakeet_us-east-1_bucket": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/silver_parakeet_us-east-1_bucket",
+            "uniqueId": "silver_parakeet_us-east-1_bucket"
+          }
+        },
+        "bucket": "silver-parakeet-us-east-1-bucket-96",
+        "force_destroy": true,
+        "tags": {
+          "Environment": "nonprod",
+          "ManagedBy": "CDKTF via Wing",
+          "Platform": "jmurillo9",
+          "Project": "silver-parakeet",
+          "Version": "v0.0.1"
+        }
+      },
+      "silver_parakeet_us-east-2_bucket": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/silver_parakeet_us-east-2_bucket",
+            "uniqueId": "silver_parakeet_us-east-2_bucket"
+          }
+        },
+        "bucket": "silver-parakeet-us-east-2-bucket-25",
+        "force_destroy": true,
+        "tags": {
+          "Environment": "nonprod",
+          "ManagedBy": "CDKTF via Wing",
+          "Platform": "jmurillo9",
+          "Project": "silver-parakeet",
+          "Version": "v0.0.1"
+        }
+      },
+      "silver_parakeet_us-west-1_bucket": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/silver_parakeet_us-west-1_bucket",
+            "uniqueId": "silver_parakeet_us-west-1_bucket"
+          }
+        },
+        "bucket": "silver-parakeet-us-west-1-bucket-52",
+        "force_destroy": true,
+        "tags": {
+          "Environment": "nonprod",
+          "ManagedBy": "CDKTF via Wing",
+          "Platform": "jmurillo9",
+          "Project": "silver-parakeet",
+          "Version": "v0.0.1"
+        }
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "./terraform.tfstate"
+      }
+    },
+    "required_providers": {
+      "aws": {
+        "source": "aws",
+        "version": "5.56.1"
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "root",
+    "path": "root",
+    "children": {
+      "Default": {
+        "id": "Default",
+        "path": "root/Default",
+        "children": {
+          "Element": {
+            "id": "Element",
+            "path": "root/Default/Element",
+            "constructInfo": {
+              "fqn": "cdktf.TerraformElement",
+              "version": "0.20.9"
+            },
+            "display": {}
+          }
+        },
+        "constructInfo": {
+          "fqn": "@winglang/sdk.std.Resource",
+          "version": "0.0.0"
+        },
+        "display": {}
+      },
+      "ParameterRegistrar": {
+        "id": "ParameterRegistrar",
+        "path": "root/ParameterRegistrar",
+        "constructInfo": {
+          "fqn": "@winglang/sdk.platform.ParameterRegistrar",
+          "version": "0.0.0"
+        },
+        "display": {
+          "hidden": true
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@winglang/sdk.core.App",
+      "version": "0.0.0"
+    },
+    "display": {}
+  }
+}

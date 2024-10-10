@@ -1,0 +1,206 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "root",
+      "version": "0.20.7"
+    },
+    "outputs": {
+    }
+  },
+  "provider": {
+    "aws": [
+      {
+      },
+      {
+        "alias": "us-east-1",
+        "region": "us-east-1"
+      },
+      {
+        "alias": "us-east-2",
+        "region": "us-east-2"
+      }
+    ]
+  },
+  "resource": {
+    "aws_s3_bucket": {
+      "bucket_us-east-1": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/bucket_us-east-1",
+            "uniqueId": "bucket_us-east-1"
+          }
+        },
+        "bucket": "silver-parakeet-us-east-1-e6ca61",
+        "force_destroy": true,
+        "provider": "aws.us-east-1",
+        "tags": {
+          "Environment": "nonprod",
+          "ManagedBy": "CDKTF via Wing",
+          "Platform": "jmurillo9",
+          "Project": "silver-parakeet",
+          "Region": "us-east-1",
+          "Version": "v0.0.1"
+        },
+        "tags_all": {
+          "Environment": "nonprod",
+          "ManagedBy": "CDKTF via Wing",
+          "Platform": "jmurillo9",
+          "Project": "silver-parakeet",
+          "Region": "us-east-1",
+          "Version": "v0.0.1"
+        }
+      },
+      "bucket_us-east-2": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/bucket_us-east-2",
+            "uniqueId": "bucket_us-east-2"
+          }
+        },
+        "bucket": "silver-parakeet-us-east-2-d2437e",
+        "force_destroy": true,
+        "provider": "aws.us-east-2",
+        "tags": {
+          "Environment": "nonprod",
+          "ManagedBy": "CDKTF via Wing",
+          "Platform": "jmurillo9",
+          "Project": "silver-parakeet",
+          "Region": "us-east-2",
+          "Version": "v0.0.1"
+        },
+        "tags_all": {
+          "Environment": "nonprod",
+          "ManagedBy": "CDKTF via Wing",
+          "Platform": "jmurillo9",
+          "Project": "silver-parakeet",
+          "Region": "us-east-2",
+          "Version": "v0.0.1"
+        }
+      },
+      "my-us-east-1-bucket-name": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/my-us-east-1-bucket-name/Default",
+            "uniqueId": "my-us-east-1-bucket-name"
+          }
+        },
+        "bucket_prefix": "my-us-east-1-bucket-name-c8ae31a8-",
+        "force_destroy": false
+      },
+      "my-us-east-2-bucket-name": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/my-us-east-2-bucket-name/Default",
+            "uniqueId": "my-us-east-2-bucket-name"
+          }
+        },
+        "bucket_prefix": "my-us-east-2-bucket-name-c854e2be-",
+        "force_destroy": false
+      }
+    },
+    "aws_s3_bucket_cors_configuration": {
+      "my-us-east-1-bucket-name_CorsConfiguration-0d7a1316_309992FE": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/my-us-east-1-bucket-name/CorsConfiguration-0d7a1316",
+            "uniqueId": "my-us-east-1-bucket-name_CorsConfiguration-0d7a1316_309992FE"
+          }
+        },
+        "bucket": "${aws_s3_bucket.my-us-east-1-bucket-name.id}",
+        "cors_rule": [
+          {
+            "allowed_headers": [
+              "*"
+            ],
+            "allowed_methods": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE",
+              "HEAD"
+            ],
+            "allowed_origins": [
+              "*"
+            ],
+            "expose_headers": [
+            ],
+            "max_age_seconds": 0
+          }
+        ]
+      },
+      "my-us-east-2-bucket-name_CorsConfiguration-2367150b_F6D9357E": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/my-us-east-2-bucket-name/CorsConfiguration-2367150b",
+            "uniqueId": "my-us-east-2-bucket-name_CorsConfiguration-2367150b_F6D9357E"
+          }
+        },
+        "bucket": "${aws_s3_bucket.my-us-east-2-bucket-name.id}",
+        "cors_rule": [
+          {
+            "allowed_headers": [
+              "*"
+            ],
+            "allowed_methods": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE",
+              "HEAD"
+            ],
+            "allowed_origins": [
+              "*"
+            ],
+            "expose_headers": [
+            ],
+            "max_age_seconds": 0
+          }
+        ]
+      }
+    },
+    "aws_s3_bucket_public_access_block": {
+      "bucket_public_access_block_us-east-1": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/bucket_public_access_block_us-east-1",
+            "uniqueId": "bucket_public_access_block_us-east-1"
+          }
+        },
+        "block_public_acls": true,
+        "block_public_policy": true,
+        "bucket": "silver-parakeet-us-east-1-e6ca61",
+        "ignore_public_acls": true,
+        "provider": "aws.us-east-1",
+        "restrict_public_buckets": true
+      },
+      "bucket_public_access_block_us-east-2": {
+        "//": {
+          "metadata": {
+            "path": "root/Default/Default/bucket_public_access_block_us-east-2",
+            "uniqueId": "bucket_public_access_block_us-east-2"
+          }
+        },
+        "block_public_acls": true,
+        "block_public_policy": true,
+        "bucket": "silver-parakeet-us-east-2-d2437e",
+        "ignore_public_acls": true,
+        "provider": "aws.us-east-2",
+        "restrict_public_buckets": true
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "./terraform.tfstate"
+      }
+    },
+    "required_providers": {
+      "aws": {
+        "source": "aws",
+        "version": "5.70.0"
+      }
+    }
+  }
+}
